@@ -14,16 +14,6 @@ if %errorlevel% neq 0 (
     echo Node.js já está instalado.
 )
 
-:: Verifica se a pasta app-retrieval/node_modules existe
-if not exist "app-retrieval\node_modules" (
-    echo Instalando dependências...
-    cd app-retrieval
-    npm install
-    cd ..
-) else (
-    echo Dependências já instaladas.
-)
-
 :: Executa o script Node.js
 node script.js
 pause
