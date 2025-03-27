@@ -14,6 +14,14 @@ if %errorlevel% neq 0 (
     echo Node.js already installed.
 )
 
+:: Instala as dependências do projeto
+echo Installing project dependencies...
+npm install
+
+:: Instala o Playwright
+echo Installing Playwright browsers...
+npx playwright install
+
 :: Executa o script Node.js
 node script.js
 pause
